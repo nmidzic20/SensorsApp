@@ -1,0 +1,29 @@
+<div class='container'>
+  <div id="navigation-bar">
+    <nav>
+      <ul>
+        <li>
+          <a id="logo" href="" title="sensor icons">
+            <img src="../assets/icon.png" alt="icon" height="30px">
+          </a>
+        </li>
+        <li><a routerLink="/login" routerLinkActive="active" *ngIf="!isLogged" ariaCurrentWhenActive="page">Login</a></li>
+        <li><a routerLink="/sensors" routerLinkActive="active" *ngIf="isLogged" ariaCurrentWhenActive="page">Sensors</a></li>
+        <li><a routerLink="/sensor-types" routerLinkActive="active" *ngIf="isLogged" ariaCurrentWhenActive="page">Sensor Types</a></li>
+        <li><a routerLink="/notifications" routerLinkActive="active" *ngIf="isLogged" ariaCurrentWhenActive="page">Notifications</a></li>
+        <li><a routerLink="/logout" (click)="logout()" *ngIf="isLogged" ariaCurrentWhenActive="page">Logout</a></li>
+        <li>
+          <button mat-icon-button *ngIf="isLogged">
+            <span class="material-icons" (click)="openSettingsWindow()">settings</span> <!--imported font Fira sans overrides <mat-icon> in this file for some reason, so need to do it like this for the icon to show-->
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div id="main">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  &copy;Sensor icon created by Freepik - Flaticon
+</footer>

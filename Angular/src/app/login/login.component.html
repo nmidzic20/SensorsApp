@@ -1,0 +1,22 @@
+<header><h2 style="text-align: center; margin: 20px; padding: 20px;">Login</h2></header>
+<main>
+    <div class="grid-login">
+        <div>
+            <label for="korime">Username</label>
+        </div>
+        <div>
+            <input class="form-control" required type="text" [(ngModel)]="username" placeholder="gdi">
+        </div>
+        <div>
+            <label for="password">Password</label>
+        </div>
+        <div>
+            <input class="form-control" required type="password" [(ngModel)]="password" placeholder="gdi">
+        </div>
+        <div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="login()">Log In</button>
+        </div>
+    </div>
+</main>
