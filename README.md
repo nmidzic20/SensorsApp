@@ -8,13 +8,13 @@ Start Camunda server (double-clicking start.bat for Windows or start.sh for Linu
 
 Backend to provide data using DBMS SQL Server:
 Start the solution in ASP.NET from Visual Studio.
-Ensure that you are using Visual Studio 2022 with latest updates, since the project requires .NET 7 support.
+(The project requires .NET 7 support.)
 
-Necessary to add DB with Migrations
+Necessary to add your own DB using commands for Migrations.
 
 Frontend:
 From the directory Angular run `ng serve`.
-Go to localhost://4200
+Go to localhost:4200/
 
-Using mail: replace key
+Using mail: in Angular/src/app/shared/services/email.service.ts enter your own username and password for the email service you are using (replace Host if not using Elastic Email service).
 
